@@ -1,0 +1,86 @@
+@font-face{
+	font-family: leyton;
+	src: url('../font/LeytonPersonal-Bold.otf');
+}
+
+@font-face{
+	font-family: montserrat-200;
+	src: url('../font/Montserrat-VariableFont_wght.ttf');
+}
+
+.bg-image{
+    background-image: url("../img/night_resort.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.row{
+    --bs-gutter-x: 0 !important;
+}
+
+.bg-image-content-1{
+    background-image: url("../img/backgorund_resort_3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.bg-image-content-2{
+    background-image: url("../img/backgorund_resort_7.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+}
+
+.img-1{
+    width: 350px;
+    
+}
+
+/* font external */
+.font-leyton{
+    font-family: 'leyton', sans-serif;
+}
+.font-montserrat{
+    font-family: 'montserrat-200', sans-serif;
+}
+
+.btn-dark{
+    background-color: rgb(79, 45, 1) !important;
+    border: none !important;
+    color: antiquewhite !important;
+}
+.btn-dark:hover{
+    background-color: rgb(132, 80, 12) !important;
+}
+
+.btn-primary{
+    background-color: rgb(250, 235, 215) !important;
+    border: none !important;
+    color: rgb(79, 45, 1) !important;
+}
+.btn-primary:hover{
+    background-color: rgb(255, 251, 246) !important;
+}
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: antiquewhite !important;
+  }
+
+.glass{
+    background-color: rgba(255, 255, 255, 0.125);
+    backdrop-filter: blur(5px);
+}
+
+.header{
+    padding-top: 10rem;
+}
+
+.footer{
+    background-color: rgb(79, 45, 1);
+    height: 40vh;
+}

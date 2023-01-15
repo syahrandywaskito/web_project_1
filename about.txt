@@ -1,0 +1,29 @@
+ketentuan siswa
+* Alamat Website harus unik
+* Memiliki Tampilan responsive pada perangkat smartphone
+* Tema Hotel (Arjuna Resort and Restaurant)
+* Memiliki fungsi CRUD
+* Tampilan Dekstop, Tablet, smartphone
+* Memiliki level User dan Admin
+* Username Admin = Nama Depan; Username user = Nama Belakang 
+* Memiliki Informasi Profile pada masing-masing profile (normal user, Admin)
+* Tampilam berbeda pada masing-masing user (Normal User, Admin)
+* Logo dan Tagline
+* Warna dasar (warna Website) sesuai dengan Logo
+* Nama DB = Nama belakang Siswa (Waskito)
+* Nama userMysql = Nama Depan (syahrandy)
+* Password DB = nama_absen (syahrandy23)
+
+
+Struktur link hompage user
+- home = homepage standar 
+- profile = profil user
+- login / sign in = untuk user
+- register / sign up = untuk user
+- logout (jika sudah login) 
+
+Struktur link hompage Admin
+- home = homepage Admin
+- profile = profil Admin
+- link database 
+- logout 
