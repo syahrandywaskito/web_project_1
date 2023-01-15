@@ -1,3 +1,8 @@
+@media screen {
+    
+}
+
+
 @font-face{
 	font-family: leyton;
 	src: url('../font/LeytonPersonal-Bold.otf');
@@ -24,7 +29,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: auto;
 }
 
 .bg-image-content-2{
@@ -32,7 +37,7 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    height: 100vh;
+    height: auto;
 }
 
 .img-1{
@@ -82,5 +87,16 @@
 
 .footer{
     background-color: rgb(79, 45, 1);
-    height: 40vh;
+    padding: 2.5rem 0;
+    color: antiquewhite;
+    height: auto;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.li-item a{
+    color: antiquewhite !important;
+    text-decoration: none !important;
 }
