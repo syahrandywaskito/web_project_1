@@ -13,6 +13,13 @@
 	src: url('../font/Montserrat-VariableFont_wght.ttf');
 }
 
+/* for non-home page */
+.bg-color{
+    background-color:  #4f2d01;
+    background-image: url("../img/bg-image-transparent-1.png");
+    height: auto;
+}
+
 .bg-image{
     background-image: url("../img/night_resort.jpg");
     background-position: center;
@@ -86,7 +93,7 @@
 }
 
 .footer{
-    background-color: rgb(79, 45, 1);
+    background-color: #4f2d01;
     padding: 2.5rem 0;
     color: antiquewhite;
     height: auto;
