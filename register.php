@@ -49,9 +49,13 @@
           <div class="container">
             <div class=" d-flex align-items-center justify-content-center" style="height: 90vh">
               <div class="card col-md-4 shadow p-3 mb-5 rounded" style="width: 25rem;">
-                <div class="card-body">
+                <div class="card-body font-montserrat">
                   <h5 class="card-title">Register</h5>
-                  <form action="proses_login.php" method="post" class="pt-2">
+                  <form action="proses_register.php" method="post" class="pt-2">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" name="email" id="email">
+                    </div>
                     <div class="mb-3">
                       <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
                       <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap">
@@ -65,18 +69,14 @@
                       <input type="password" class="form-control" name="password" id="password">
                     </div>
                     <div class="mb-3 row">
-                        <div class="col form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Pria
-                            </label>
-                        </div>
-                        <div class="col form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Wanita
-                            </label>
-                        </div>
+                        <label for="pria" class="col">
+                          <input type="radio" name="jenis_kelamin" value="pria"  id="pria">
+                          Pria
+                        </label>
+                        <label for="wanita" class="col">
+                          <input type="radio" name="jenis_kelamin" value="wanita" id="wanita">
+                          Wanita
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-dark">Submit</button>
                   </form>

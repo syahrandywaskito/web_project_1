@@ -49,7 +49,7 @@
           <div class="container">
             <div class=" d-flex align-items-center justify-content-center" style="height: 80vh">
               <div class="card col-md-4 shadow p-3 mb-5 rounded" style="width: 25rem;">
-                <div class="card-body">
+                <div class="card-body font-montserrat">
                   <h5 class="card-title">LOGIN</h5>
                   <form action="proses_login.php" method="post" class="pt-2">
                     <div class="mb-3">
