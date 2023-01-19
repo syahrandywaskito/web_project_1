@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color: antiquewhite">
       
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark text-primary" style="background-color:  #4f2d01;">
@@ -46,9 +46,9 @@
 
         <!-- form login -->
         <section>
-          <div class="container" style="height: 70vh">
+          <div class="container">
             <div class=" d-flex align-items-center justify-content-center" style="height: 80vh">
-              <div class="card col-md-4" style="width: 25rem;">
+              <div class="card col-md-4 shadow p-3 mb-5 rounded" style="width: 25rem;">
                 <div class="card-body">
                   <h5 class="card-title">LOGIN</h5>
                   <form action="proses_login.php" method="post" class="pt-2">
@@ -60,7 +60,7 @@
                       <label for="password" class="form-label">Password</label>
                       <input type="password" class="form-control" name="password" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-dark">Submit</button>
                   </form>
                 </div>
               </div>
