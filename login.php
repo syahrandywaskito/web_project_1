@@ -61,6 +61,9 @@
                       <input type="password" class="form-control" name="password" id="password">
                     </div>
                     <button type="submit" class="btn btn-dark">Submit</button>
+                    <div class="pt-2">
+                      <p>Anda belum punya Akun ? <a href="register.php">Register</a></p>
+                    </div>
                   </form>
                 </div>
               </div>

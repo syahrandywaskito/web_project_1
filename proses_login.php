@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
         $_SESSION['username'] = $row['username'];
         $_SESSION['pwd'] = $row['pwd'];
         // echo "selamat anda berhasil login";
-        var_dump($result);
+        var_dump($row);
 
 }
     

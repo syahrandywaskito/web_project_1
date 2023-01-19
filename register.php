@@ -48,7 +48,7 @@
         <section>
           <div class="container">
             <div class=" d-flex align-items-center justify-content-center" style="height: 90vh">
-              <div class="card col-md-4 shadow p-3 mb-5 rounded" style="width: 25rem;">
+              <div class="card col-md-4 shadow p-2 mb-5 rounded" style="width: 29rem;">
                 <div class="card-body font-montserrat">
                   <h5 class="card-title">Register</h5>
                   <form action="proses_register.php" method="post" class="pt-2">
@@ -79,6 +79,9 @@
                         </label>
                     </div>
                     <button type="submit" class="btn btn-dark">Submit</button>
+                    <div class="pt-2">
+                      <p>Anda sudah punya Akun ? <a href="login.php">Login</a></p>
+                    </div>
                   </form>
                 </div>
               </div>
