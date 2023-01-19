@@ -1,7 +1,7 @@
 DB : pemesanan_kamarHotel 
         * pengunjung
             - id_pengunjung : varchar(10) PRIMARY KEY
-            - nm_pengunjung : varchar(30)
+            - nama_pengunjung : varchar(30)
             - alamat : varchar(20)
             - JK : enum('Pria', 'Wanita')
             - no_tlp : varchar(20)
@@ -11,7 +11,7 @@ DB : pemesanan_kamarHotel
             - no_transaksi : int(11) PRIMARY KEY
             - id_pengunjung : varchar(10)
             - id_karyawan :  varchar(10)
-            - jmlh_kamar : int(11)
+            - jumlah_kamar : int(11)
             - tgl_masuk : date
             - tgl_keluar : date
             - lama_nginap : int(11)
