@@ -18,8 +18,7 @@ if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
         $_SESSION['pwd'] = $row['pwd'];
-        // echo "selamat anda berhasil login";
-        var_dump($row);
+        header("location:user/index.php");
 
 }
     
