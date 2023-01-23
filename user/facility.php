@@ -19,7 +19,7 @@ $username = $_SESSION['username'];
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark text-primary" style="background-color:  #4f2d01;">
             <div class="container">
-              <a class="navbar-brand font-leyton" href="index.html">
+              <a class="navbar-brand font-leyton" href="index.php">
                 <!-- <img src="/img/logo1.png" alt="Logo" width="35" class="d-inline-block align-text-top rounded-circle"> -->
                 Arjuna Resort
               </a>
@@ -36,6 +36,9 @@ $username = $_SESSION['username'];
                   </li>
                   <li class="nav-item">
                     <a class="nav-link"  href="about.php">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="user_profile.php">User Profile</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="logout.php">Logout</a>
@@ -225,6 +228,7 @@ $username = $_SESSION['username'];
                   <li class="li-item"><a href="facility.php" class="btn btn-dark btn-md">Facility</a></li>
                 </ul>
                 <ul class="list text-center col">
+                  <li class="li-item"><a href="user_profile.php" class="btn btn-dark btn-md">User Profile</a></li>
                   <li class="li-item"><a href="rent_room.php" class="btn btn-dark btn-md">Rent</a></li>
                   <li class="li-item"><a href="logout.php" class="btn btn-dark btn-md">Logout</a></li>
                 </ul>
