@@ -27,7 +27,7 @@ $username = $_SESSION['username'];
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav font-montserrat">
+                <ul class="navbar-nav font-montserrat gap-1">
                   <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                   </li>
@@ -41,7 +41,10 @@ $username = $_SESSION['username'];
                     <a class="nav-link" href="user_profile.php">User Profile</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Logout</a>
+                    <a class="nav-link btn btn-primary btn-md active" aria-current="page" href="rent_room.php">Rent</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-primary btn-md" href="logout.php">Logout</a>
                   </li>
                 </ul>
               </div>

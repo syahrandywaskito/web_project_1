@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
 elseif (($username == "admin") AND ($pwd == "toor")) {
         $_SESSION['username'] = $username;
         $_SESSION['pwd'] = $pwd;
-        echo "selamat anda berhasil login sebagai admin";
+        header("location:admin/index.php");
 }
     
 else {
