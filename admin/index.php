@@ -12,83 +12,65 @@ $username = $_SESSION['username'];
     <link rel="icon" type="image/x-icon" href="../img/Arjuna_logo_favicon_2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
   <body>
 
 	<div>
-    <div class="row flex-nowrap">
+    <div class="row flex-nowrap gap-4">
       <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 text-primary" style="background-color: #4f2d01;">
-        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-4 text-white min-vh-100">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-4 gap-3 text-white min-vh-100">
           <a href="index.php" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <span class="fs-5 d-none d-sm-inline font-leyton">Arjuna Resort</span>
           </a>
-          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start font-montserrat" id="menu">
             <li class="nav-item">
-              <a href="#" class="nav-link align-middle px-0">
-                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+              <a class="nav-link align-middle p-2 btn btn-dark btn-md active" href="index.php" aria-current="page">
+                <i class="bi bi-house fs-4"></i>
+                <span class="ms-1 d-none d-sm-inline">Home</span>
               </a>
             </li>
-            <li>
-          		<a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-							<i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-							<ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-								<li class="w-100">
-									<a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
-								</li>
-								<li>
-									<a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
-								</li>
-							</ul>
+            <li class="nav-item">
+          		<a href="show_transaksi.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
+							  <i class="fs-4 bi bi-credit-card"></i> 
+                <span class="ms-1 d-none d-sm-inline">Transaksi</span> 
+              </a>
             </li>
-            <li>
-              <a href="#" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+            <li class="nav-item">
+              <a href="show_pengunjung.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
+                <i class="fs-4 bi bi-file-person"></i> 
+                <span class="ms-1 d-none d-sm-inline">Pengunjung</span>
+              </a>
             </li>
-            <li>
-              <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-              <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-              <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                <li class="w-100">
-                  <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a href="show_karyawan.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
+                <i class="fs-4 bi bi-person-workspace"></i> 
+                <span class="ms-1 d-none d-sm-inline">Karyawan</span>
+              </a>
             </li>
-            <li>
-              <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
-              <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                <li class="w-100">
-                  <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a href="show_kamar.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
+                <i class="fs-4 bi bi-houses"></i> 
+                <span class="ms-1 d-none d-sm-inline">Kamar</span> 
+              </a>
             </li>
-            <li>
-              <a href="#" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+            <li class="nav-item">
+              <a href="show_website_user.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
+                <i class="fs-4 bi bi-person-circle"></i> 
+                <span class="ms-1 d-none d-sm-inline">Website User</span> 
+              </a>
             </li>
           </ul>
           <hr>
-          <div class="dropdown pb-4">
+          <div class="dropdown pb-4 font-montserrat">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 							<img src="../img/user.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
 							<span class="d-none d-sm-inline mx-1"><?php echo $username?></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-light text-small shadow" style="background-color: antiquewhite;">
               <li>
-								<a class="dropdown-item" href="#">Profile</a>
+								<a class="dropdown-item" href="admin_profile.php">Profile</a>
 							</li>
               <li>
                 <hr class="dropdown-divider">
@@ -100,9 +82,12 @@ $username = $_SESSION['username'];
           </div>
         </div>
       </div>
-			<div class="col py-3">
-				<div class="container-fluid">
-					content-here
+			<div class="col py-3 ml-2">
+				<div class="container">
+          <header class="mt-4">
+            <h3 class="fw-light font-montserrat">Admin Workspace | Home</h3>
+          </header>
+          <hr>
 				</div>
 			</div>
   	</div>
