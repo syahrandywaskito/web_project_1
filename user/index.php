@@ -56,7 +56,7 @@ $username = $_SESSION['username'];
 
         <!-- kata penawaran -->
         <section class="container header">
-          <div class="text-center text-light font-montserrat">
+          <div class="text-center font-montserrat" style="color: var(--bs-light);">
             <h1 class="display-5">Don't Have a Good Holiday, Have a Great Holiday</h1>
             <p class="lead">Welcome <strong><?php echo $username ?></strong>, let's look some Special Offer</p>
             <div class="btn btn-primary btn-lg mt-2">

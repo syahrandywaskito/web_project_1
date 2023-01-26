@@ -46,8 +46,8 @@
 
         <!-- form login -->
         <section>
-          <div class="container">
-            <div class=" d-flex align-items-center justify-content-center" style="height: 90vh">
+          <div class="container mt-5">
+            <div class=" d-flex align-items-center justify-content-center">
               <div class="card col-md-4 shadow p-2 mb-5 rounded" style="width: 29rem;">
                 <div class="card-body font-montserrat">
                   <h5 class="card-title">Register</h5>

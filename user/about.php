@@ -56,7 +56,7 @@ $username = $_SESSION['username'];
 
         <!-- kata penawaran -->
         <section class="container header">
-          <div class="text-center text-light font-montserrat" style="padding-bottom: 6rem;">
+          <div class="text-center font-montserrat" style="padding-bottom: 6rem; color: var(--bs-light);">
             <h1 class="display-5">About Us</h1>
             <p class="lead">More information about Arjuna Resort</p>
           </div>
