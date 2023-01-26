@@ -84,10 +84,23 @@ $username = $_SESSION['username'];
       </div>
 			<div class="col py-3 ml-2">
 				<div class="container">
+
+          <!-- header -->
           <header class="mt-4">
             <h3 class="fw-light font-montserrat">Admin Workspace | Home</h3>
           </header>
+          <!--  -->
+
           <hr>
+          <!-- content -->
+          <main>
+            <section>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolor amet unde molestiae blanditiis inventore cupiditate debitis perferendis eveniet numquam accusantium, expedita cumque voluptates, sed iusto, exercitationem doloribus hic alias delectus quaerat. Vero sit deleniti voluptatum atque odit ullam deserunt dolor, accusamus possimus inventore obcaecati perspiciatis aperiam saepe officia. Assumenda.
+              </p>
+            </section>
+          </main>
+          <!--  -->
 				</div>
 			</div>
   	</div>

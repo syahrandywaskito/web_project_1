@@ -84,10 +84,105 @@ $username = $_SESSION['username'];
 				</div>
 				<div class="col py-3 ml-2">
 					<div class="container">
+						<!-- header -->
 						<header class="mt-4">
 							<h3 class="fw-light font-montserrat">Admin Workspace | Karyawan</h3>
 						</header>
+						<!--  -->
 						<hr>
+						<!-- Content -->
+						<main class="mt-5">
+							<!-- add data -->
+							<section>
+								<a href="add_karyawan.php" class="btn btn-dark btn-md font-montserrat">Add Data</a>
+							</section>
+							<!--  -->
+
+							<section class="mt-4">
+										<form action="" method="post">
+											<div class="d-flex align-items-center flex-wrap gap-2 font-montserrat">
+												<div class="">
+													<label for="">Cari Berdasarkan</label>
+												</div>
+												<div class="">
+													<select name="pilih" id="search" class="btn btn-dark btn-md">
+														<option value="">------</option>
+														<option value="id_karyawan">Id karyawan</option>
+														<option value="nama_karyawan">Nama Karyawan</option>
+														<option value="jenis_kelamin">Jenis kelamin</option>
+													</select>
+												</div>
+												<div class="">
+													<input type="text" name="textcari" class="form-control-sm">
+												</div>
+												<div class="">
+													<input type="submit" name="cari" value="Cari" class="btn btn-dark btn-md">	
+												</div>
+												<div class="">
+													<input type="submit" name="semua" value="Tampilkan Semua" class="btn btn-dark btn-md">
+												</div>
+											</div>
+										</form>
+							</section>
+
+							<!-- Table -->
+							<section class="table-responsive-md font-montserrat mt-4">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr>
+											<th scope="col" class="fst-italic fw-normal">No</th>
+											<th scope="col" class="fst-italic fw-normal">Id Karyawan</th>
+											<th scope="col" class="fst-italic fw-normal">Nama Karyawan</th>
+											<th scope="col" class="fst-italic fw-normal">Jenis Kelamin</th>
+											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- php search -->
+										<?php
+										include '../koneksi.php';
+										$input_karyawan = "";
+										if (isset($_POST['cari'])) {
+											$opsi = $_POST['pilih'];
+											$nama_data = $_POST['textcari'];
+											$input_karyawan = mysqli_query($koneksi, "SELECT * FROM karyawan WHERE $opsi LIKE '%$nama_data%'");
+										}
+										else{
+											$input_karyawan = mysqli_query($koneksi, "SELECT * FROM karyawan");
+										}
+										?>
+										<!--  -->
+
+										<!-- php dynamic table -->
+										<?php
+
+										include "../koneksi.php";
+										$no = 1;
+										foreach ($input_karyawan as $row) {
+											echo "<tr>
+															<td>$no</td>
+															<td>" . $row['id_karyawan'] . "</td>
+															<td>" . $row['nama_karyawan'] . "</td>
+															<td>" . $row['jenis_kelamin'] . "</td>
+															<td>
+																	<a href='update_karyawan.php?no_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Update</a>
+															</td>
+															<td>
+																	<a href='delete_karyawan.php?no_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Delete</a>
+															</td>
+														</tr>";
+											$no++;
+										}
+										
+										?>
+										<!--  -->
+									</tbody>
+								</table>
+							</section>
+							<!--  -->
+
+						</main>
+						<!--  -->
 					</div>
 				</div>
 			</div>

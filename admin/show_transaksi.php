@@ -84,10 +84,122 @@ $username = $_SESSION['username'];
 				</div>
 				<div class="col py-3 ml-2">
 					<div class="container">
+						
+						<!-- header page -->
 						<header class="mt-4">
 							<h3 class="fw-light font-montserrat">Admin Workspace | Transaksi</h3>
 						</header>
+						<!--  -->
 						<hr>
+						<!-- Content -->
+						<main class="mt-5">
+							<!-- add data -->
+							<section>
+								<a href="add_transaksi.php" class="btn btn-dark btn-md font-montserrat">Add Data</a>
+							</section>
+							<!--  -->
+
+							<section class="mt-4">
+										<form action="" method="post">
+											<div class="d-flex align-items-center flex-wrap gap-2 font-montserrat">
+												<div class="">
+													<label for="">Cari Berdasarkan</label>
+												</div>
+												<div class="">
+													<select name="pilih" id="search" class="btn btn-dark btn-md">
+														<option value="">------</option>
+														<option value="no_transaksi">No. Transaksi</option>
+														<option value="id_pengunjung">Id Pengunjung</option>
+														<option value="id_karyawan">Id Karyawan</option>
+														<option value="jumlah_kamar">Jumlah Kamar</option>
+														<option value="tgl_masuk">Tanggal Masuk</option>
+														<option value="tgl_keluar">Tanggal Keluar</option>
+														<option value="lama_nginap">Lama Menginap</option>
+														<option value="total_harga">Total Harga</option>
+													</select>
+												</div>
+												<div class="">
+													<input type="text" name="textcari" class="form-control-sm">
+												</div>
+												<div class="">
+													<input type="submit" name="cari" value="Cari" class="btn btn-dark btn-md">	
+												</div>
+												<div class="">
+													<input type="submit" name="semua" value="Tampilkan Semua" class="btn btn-dark btn-md">
+												</div>
+											</div>
+										</form>
+							</section>
+
+							<!-- Table -->
+							<section class="table-responsive-md font-montserrat mt-4">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr>
+											<th scope="col" class="fst-italic fw-normal">No</th>
+											<th scope="col" class="fst-italic fw-normal">No. Transaksi</th>
+											<th scope="col" class="fst-italic fw-normal">Id Pengunjung</th>
+											<th scope="col" class="fst-italic fw-normal">Id Karyawan</th>
+											<th scope="col" class="fst-italic fw-normal">Jumlah Kamar</th>
+											<th scope="col" class="fst-italic fw-normal">Tanggal Masuk</th>
+											<th scope="col" class="fst-italic fw-normal">Tanggal Keluar</th>
+											<th scope="col" class="fst-italic fw-normal">Lama Menginap</th>
+											<th scope="col" class="fst-italic fw-normal">Total Harga</th>
+											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- php search -->
+										<?php
+										include '../koneksi.php';
+										$input_transaksi = "";
+										if (isset($_POST['cari'])) {
+											$opsi = $_POST['pilih'];
+											$nama_data = $_POST['textcari'];
+											$input_transaksi = mysqli_query($koneksi, "SELECT * FROM transaksi WHERE $opsi LIKE '%$nama_data%'");
+										}
+										else{
+											$input_transaksi = mysqli_query($koneksi, "SELECT * FROM transaksi");
+										}
+										?>
+										<!--  -->
+
+										<!-- php dynamic table -->
+										<?php
+
+										include "../koneksi.php";
+										$no = 1;
+										foreach ($input_transaksi as $row) {
+											echo "<tr>
+															<td>$no</td>
+															<td>" . $row['no_transaksi'] . "</td>
+															<td>" . $row['id_pengunjung'] . "</td>
+															<td>" . $row['id_karyawan'] . "</td>
+															<td>" . $row['jumlah_kamar'] . "</td>
+															<td>" . $row['tgl_masuk'] . "</td>
+															<td>" . $row['tgl_keluar'] . "</td>
+															<td>" . $row['lama_nginap'] . "</td>
+															<td>" . $row['total_harga'] . "</td>
+															<td>
+																	<a href='update_transaksi.php?no_transaksi=$row[no_transaksi]' class='btn btn-dark btn-md'>Update</a>
+															</td>
+															<td>
+																	<a href='delete_transaksi.php?no_transaksi=$row[no_transaksi]' class='btn btn-dark btn-md'>Delete</a>
+															</td>
+														</tr>";
+											$no++;
+										}
+										
+										?>
+										<!--  -->
+									</tbody>
+								</table>
+							</section>
+							<!--  -->
+
+						</main>
+						<!--  -->
+
 					</div>
 				</div>
 			</div>
