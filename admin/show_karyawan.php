@@ -90,8 +90,17 @@ $username = $_SESSION['username'];
 						</header>
 						<!--  -->
 						<hr>
+
+							<!-- breadcrump -->
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb font-montserrat">
+								<li class="breadcrumb-item active" aria-current="page">Karyawan</li>
+							</ol>
+						</nav>
+						<!--  -->
+
 						<!-- Content -->
-						<main class="mt-5">
+						<main class="mt-3">
 							<!-- add data -->
 							<section>
 								<a href="add_karyawan.php" class="btn btn-dark btn-md font-montserrat">Add Data</a>
@@ -107,7 +116,7 @@ $username = $_SESSION['username'];
 												<div class="">
 													<select name="pilih" id="search" class="btn btn-dark btn-md">
 														<option value="">------</option>
-														<option value="id_karyawan">Id karyawan</option>
+														<option value="id_karyawan">ID karyawan</option>
 														<option value="nama_karyawan">Nama Karyawan</option>
 														<option value="jenis_kelamin">Jenis kelamin</option>
 													</select>
@@ -131,7 +140,7 @@ $username = $_SESSION['username'];
 									<thead>
 										<tr>
 											<th scope="col" class="fst-italic fw-normal">No</th>
-											<th scope="col" class="fst-italic fw-normal">Id Karyawan</th>
+											<th scope="col" class="fst-italic fw-normal">ID Karyawan</th>
 											<th scope="col" class="fst-italic fw-normal">Nama Karyawan</th>
 											<th scope="col" class="fst-italic fw-normal">Jenis Kelamin</th>
 											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
@@ -165,10 +174,10 @@ $username = $_SESSION['username'];
 															<td>" . $row['nama_karyawan'] . "</td>
 															<td>" . $row['jenis_kelamin'] . "</td>
 															<td>
-																	<a href='update_karyawan.php?no_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Update</a>
+																	<a href='update_karyawan.php?id_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Update</a>
 															</td>
 															<td>
-																	<a href='delete_karyawan.php?no_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Delete</a>
+																	<a href='delete_karyawan.php?id_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Delete</a>
 															</td>
 														</tr>";
 											$no++;

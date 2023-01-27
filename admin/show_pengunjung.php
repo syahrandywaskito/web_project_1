@@ -84,10 +84,125 @@ $username = $_SESSION['username'];
 				</div>
 				<div class="col py-3 ml-2">
 					<div class="container">
+						
+						<!-- header page -->
 						<header class="mt-4">
 							<h3 class="fw-light font-montserrat">Admin Workspace | Pengunjung</h3>
 						</header>
+						<!--  -->
 						<hr>
+
+						<!-- breadcrump -->
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb font-montserrat">
+								<li class="breadcrumb-item active" aria-current="page">Pengunjung</li>
+							</ol>
+						</nav>
+						<!--  -->
+
+						<!-- Content -->
+						<main class="mt-3">
+							<!-- add data -->
+							<section>
+								<a href="add_pengunjung.php" class="btn btn-dark btn-md font-montserrat">Add Data</a>
+							</section>
+							<!--  -->
+
+							<section class="mt-4">
+										<form action="" method="post">
+											<div class="d-flex align-items-center flex-wrap gap-2 font-montserrat">
+												<div class="">
+													<label for="">Cari Berdasarkan</label>
+												</div>
+												<div class="">
+													<select name="pilih" id="search" class="btn btn-dark btn-md">
+														<option value="">------</option>
+														<option value="id_pengunjung">ID Pengunjung</option>
+														<option value="nama_pengunjung">Nama Pengunjung</option>
+														<option value="alamat">Alamat</option>
+														<option value="jenis_kelamin">Jenis Kelamin</option>
+														<option value="no_telepon">No Telepon</option>
+														<option value="no_ktp">No KTP</option>
+													</select>
+												</div>
+												<div class="">
+													<input type="text" name="textcari" class="form-control-sm">
+												</div>
+												<div class="">
+													<input type="submit" name="cari" value="Cari" class="btn btn-dark btn-md">	
+												</div>
+												<div class="">
+													<input type="submit" name="semua" value="Tampilkan Semua" class="btn btn-dark btn-md">
+												</div>
+											</div>
+										</form>
+							</section>
+
+							<!-- Table -->
+							<section class="table-responsive-md font-montserrat mt-4">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr>
+											<th scope="col" class="fst-italic fw-normal">No</th>
+											<th scope="col" class="fst-italic fw-normal">ID Pengunjung</th>
+											<th scope="col" class="fst-italic fw-normal">Nama Pengunjung</th>
+											<th scope="col" class="fst-italic fw-normal">Alamat</th>
+											<th scope="col" class="fst-italic fw-normal">Jenis Kelamin</th>
+											<th scope="col" class="fst-italic fw-normal">No Telepon</th>
+											<th scope="col" class="fst-italic fw-normal">No KTP</th>
+											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- php search -->
+										<?php
+										include '../koneksi.php';
+										$input_pengunjung = "";
+										if (isset($_POST['cari'])) {
+											$opsi = $_POST['pilih'];
+											$nama_data = $_POST['textcari'];
+											$input_pengunjung = mysqli_query($koneksi, "SELECT * FROM pengunjung WHERE $opsi LIKE '%$nama_data%'");
+										}
+										else{
+											$input_pengunjung = mysqli_query($koneksi, "SELECT * FROM pengunjung");
+										}
+										?>
+										<!--  -->
+
+										<!-- php dynamic table -->
+										<?php
+
+										include "../koneksi.php";
+										$no = 1;
+										foreach ($input_pengunjung as $row) {
+											echo "<tr>
+															<td>$no</td>
+															<td>" . $row['id_pengunjung'] . "</td>
+															<td>" . $row['nama_pengunjung'] . "</td>
+															<td>" . $row['alamat'] . "</td>
+															<td>" . $row['jenis_kelamin'] . "</td>
+															<td>" . $row['no_telepon'] . "</td>
+															<td>" . $row['no_ktp'] . "</td>
+															<td>
+																	<a href='update_pengunjung.php?id_pengunjung=$row[id_pengunjung]' class='btn btn-dark btn-md'>Update</a>
+															</td>
+															<td>
+																	<a href='delete_pengunjung.php?id_pengunjung=$row[id_pengunjung]' class='btn btn-dark btn-md'>Delete</a>
+															</td>
+														</tr>";
+											$no++;
+										}
+										
+										?>
+										<!--  -->
+									</tbody>
+								</table>
+							</section>
+							<!--  -->
+
+						</main>
+						<!--  -->
+
 					</div>
 				</div>
 			</div>

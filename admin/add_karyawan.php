@@ -96,23 +96,58 @@ $username = $_SESSION['username'];
           <!-- breadcump -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb font-montserrat">
-              <li class="breadcrumb-item"><a href="show_transaksi.php">Transaksi</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Add Data Transaksi</li>
+              <li class="breadcrumb-item"><a href="show_karyawan.php">Karyawan</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add Data Karyawan</li>
             </ol>
           </nav>
           <!--  -->
           
           <!-- content -->
           <main>
-            
+            <div class="mt-5 font-montserrat">
+              <div class="pb-2">
+                <p class="lead fw-semibold">Input Data</p>
+              </div>
+              <form action="process/add_process_karyawan.php" method="post">
+                <div class="row mb-3">
+                  <label for="id_karyawan" class="col-sm-2 col-form-label">ID Karyawan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="id_karyawan" name="id_karyawan">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="nama_karyawan" class="col-sm-2 col-form-label">Nama Karyawan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nama_karyawan" name="nama_karyawan">
+                  </div>
+                </div>
+                <fieldset class="row mb-3">
+                  <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="jenis_kelamin" id="pria" value="pria">
+                      <label class="form-check-label" for="pria">
+                        Pria
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="jenis_kelamin" id="wanita" value="wanita">
+                      <label class="form-check-label" for="wanita">
+                        Wanita
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn btn-dark btn-md">Submit</button>
+              </form>
+            </div>
           </main>
           <!--  -->
 				</div>
 			</div>
   	</div>
 	</div>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>

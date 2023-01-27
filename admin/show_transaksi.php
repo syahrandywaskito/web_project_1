@@ -91,8 +91,17 @@ $username = $_SESSION['username'];
 						</header>
 						<!--  -->
 						<hr>
+
+						<!-- breadcrump -->
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb font-montserrat">
+								<li class="breadcrumb-item active" aria-current="page">Transaksi</li>
+							</ol>
+						</nav>
+						<!--  -->
+
 						<!-- Content -->
-						<main class="mt-5">
+						<main class="mt-3">
 							<!-- add data -->
 							<section>
 								<a href="add_transaksi.php" class="btn btn-dark btn-md font-montserrat">Add Data</a>
@@ -109,8 +118,8 @@ $username = $_SESSION['username'];
 													<select name="pilih" id="search" class="btn btn-dark btn-md">
 														<option value="">------</option>
 														<option value="no_transaksi">No. Transaksi</option>
-														<option value="id_pengunjung">Id Pengunjung</option>
-														<option value="id_karyawan">Id Karyawan</option>
+														<option value="id_pengunjung">ID Pengunjung</option>
+														<option value="id_karyawan">ID Karyawan</option>
 														<option value="jumlah_kamar">Jumlah Kamar</option>
 														<option value="tgl_masuk">Tanggal Masuk</option>
 														<option value="tgl_keluar">Tanggal Keluar</option>
@@ -138,8 +147,8 @@ $username = $_SESSION['username'];
 										<tr>
 											<th scope="col" class="fst-italic fw-normal">No</th>
 											<th scope="col" class="fst-italic fw-normal">No. Transaksi</th>
-											<th scope="col" class="fst-italic fw-normal">Id Pengunjung</th>
-											<th scope="col" class="fst-italic fw-normal">Id Karyawan</th>
+											<th scope="col" class="fst-italic fw-normal">ID Pengunjung</th>
+											<th scope="col" class="fst-italic fw-normal">ID Karyawan</th>
 											<th scope="col" class="fst-italic fw-normal">Jumlah Kamar</th>
 											<th scope="col" class="fst-italic fw-normal">Tanggal Masuk</th>
 											<th scope="col" class="fst-italic fw-normal">Tanggal Keluar</th>

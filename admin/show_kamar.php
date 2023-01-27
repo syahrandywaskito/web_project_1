@@ -84,10 +84,114 @@ $username = $_SESSION['username'];
 				</div>
 				<div class="col py-3 ml-2">
 					<div class="container">
+						<!-- header -->
 						<header class="mt-4">
 							<h3 class="fw-light font-montserrat">Admin Workspace | Kamar</h3>
 						</header>
+						<!--  -->
 						<hr>
+
+							<!-- breadcrump -->
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb font-montserrat">
+								<li class="breadcrumb-item active" aria-current="page">Kamar</li>
+							</ol>
+						</nav>
+						<!--  -->
+
+						<!-- Content -->
+						<main class="mt-3">
+							<!-- add data -->
+							<section>
+								<a href="add_kamar.php" class="btn btn-dark btn-md font-montserrat">Add Data</a>
+							</section>
+							<!--  -->
+
+							<section class="mt-4">
+										<form action="" method="post">
+											<div class="d-flex align-items-center flex-wrap gap-2 font-montserrat">
+												<div class="">
+													<label for="">Cari Berdasarkan</label>
+												</div>
+												<div class="">
+													<select name="pilih" id="search" class="btn btn-dark btn-md">
+														<option value="">------</option>
+														<option value="no_kamar">No Kamar</option>
+														<option value="jenis_kamar">Jenis Kamar</option>
+														<option value="harga">Harga</option>
+													</select>
+												</div>
+												<div class="">
+													<input type="text" name="textcari" class="form-control-sm">
+												</div>
+												<div class="">
+													<input type="submit" name="cari" value="Cari" class="btn btn-dark btn-md">	
+												</div>
+												<div class="">
+													<input type="submit" name="semua" value="Tampilkan Semua" class="btn btn-dark btn-md">
+												</div>
+											</div>
+										</form>
+							</section>
+
+							<!-- Table -->
+							<section class="table-responsive-md font-montserrat mt-4">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr>
+											<th scope="col" class="fst-italic fw-normal">No</th>
+											<th scope="col" class="fst-italic fw-normal">No. Kamar</th>
+											<th scope="col" class="fst-italic fw-normal">Jenis Kamar</th>
+											<th scope="col" class="fst-italic fw-normal">Harga</th>
+											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- php search -->
+										<?php
+										include '../koneksi.php';
+										$input_kamar = "";
+										if (isset($_POST['cari'])) {
+											$opsi = $_POST['pilih'];
+											$nama_data = $_POST['textcari'];
+											$input_kamar = mysqli_query($koneksi, "SELECT * FROM kamar WHERE $opsi LIKE '%$nama_data%'");
+										}
+										else{
+											$input_kamar = mysqli_query($koneksi, "SELECT * FROM kamar");
+										}
+										?>
+										<!--  -->
+
+										<!-- php dynamic table -->
+										<?php
+
+										include "../koneksi.php";
+										$no = 1;
+										foreach ($input_kamar as $row) {
+											echo "<tr>
+															<td>$no</td>
+															<td>" . $row['no_kamar'] . "</td>
+															<td>" . $row['jenis_kamar'] . "</td>
+															<td>" . $row['harga'] . "</td>
+															<td>
+																	<a href='update_kamar.php?no_kamar=$row[no_kamar]' class='btn btn-dark btn-md'>Update</a>
+															</td>
+															<td>
+																	<a href='delete_kamar.php?no_kamar=$row[no_kamar]' class='btn btn-dark btn-md'>Delete</a>
+															</td>
+														</tr>";
+											$no++;
+										}
+										
+										?>
+										<!--  -->
+									</tbody>
+								</table>
+							</section>
+							<!--  -->
+
+						</main>
+						<!--  -->
 					</div>
 				</div>
 			</div>
