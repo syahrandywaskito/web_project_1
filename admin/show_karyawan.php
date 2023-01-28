@@ -177,7 +177,7 @@ $username = $_SESSION['username'];
 																	<a href='update_karyawan.php?id_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Update</a>
 															</td>
 															<td>
-																	<a href='delete_karyawan.php?id_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Delete</a>
+																	<a href='delete/delete_karyawan.php?id_karyawan=$row[id_karyawan]' class='btn btn-dark btn-md'>Delete</a>
 															</td>
 														</tr>";
 											$no++;

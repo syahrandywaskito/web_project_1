@@ -108,7 +108,7 @@ $username = $_SESSION['username'];
               <div class="pb-2">
                 <p class="lead fw-semibold">Input Data</p>
               </div>
-              <form action="process/add_process_karyawan.php" method="post">
+              <form action="add/add_process_karyawan.php" method="post">
                 <div class="row mb-3">
                   <label for="id_karyawan" class="col-sm-2 col-form-label">ID Karyawan</label>
                   <div class="col-sm-10">

@@ -108,7 +108,7 @@ $username = $_SESSION['username'];
               <div class="pb-2">
                 <p class="lead fw-semibold">Input Data</p>
               </div>
-                <form class="row g-3" action="process/add_process_website_user.php" method="post">
+                <form class="row g-3" action="add/add_process_website_user.php" method="post">
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
                       <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
