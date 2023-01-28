@@ -87,28 +87,84 @@ $username = $_SESSION['username'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Home</h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Add Data Pengunjung</h3>
           </header>
           <!--  -->
 
           <hr>
+
+          <!-- breadcump -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb font-montserrat">
+              <li class="breadcrumb-item"><a href="show_pengunjung.php">Pengunjung</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add Data Pengunjung</li>
+            </ol>
+          </nav>
+          <!--  -->
+          
           <!-- content -->
           <main>
-            <header>
-              <div class="container mt-5">
-                <div class="text-center text-dark font-montserrat">
-                  <h2 class="fw-light">Welcome <?php echo $username?></h2>
-                  <p class="lead">Welcome to Admin Workspace, Enjoy!!</p>
-                </div>
+            <div class="mt-5 font-montserrat">
+              <div class="pb-2">
+                <p class="lead fw-semibold">Input Data</p>
               </div>
-            </header>
+                <form class="row g-3" action="process/add_process_pengunjung.php" method="post">
+                  <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="id" name="id_pengunjung" placeholder="name@example.com">
+                      <label for="id">ID Pengunjung</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="nama" name="nama_pengunjung" placeholder="name@example.com">
+                      <label for="nama">Nama Pengunjung</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a comment here" id="alamat" name="alamat"></textarea>
+                      <label for="alamat">Alamat</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="id" name="no_telepon" placeholder="name@example.com">
+                      <label for="id">Nomor Telepon</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="nama" name="no_ktp" placeholder="name@example.com">
+                      <label for="nama">Nomor KTP</label>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="pria" value="pria">
+                    <label class="form-check-label" for="pria">
+                      Pria
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="wanita" value="wanita">
+                    <label class="form-check-label" for="wanita">
+                      Wanita
+                    </label>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-dark btn-md">Submit</button>
+                  </div>
+              </form>
+            </div>
           </main>
           <!--  -->
 				</div>
 			</div>
   	</div>
 	</div>
-  
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-	</body>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
 </html>

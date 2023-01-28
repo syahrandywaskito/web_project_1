@@ -142,7 +142,7 @@ $username = $_SESSION['username'];
 											<th scope="col" class="fst-italic fw-normal">No</th>
 											<th scope="col" class="fst-italic fw-normal">No. Kamar</th>
 											<th scope="col" class="fst-italic fw-normal">Jenis Kamar</th>
-											<th scope="col" class="fst-italic fw-normal">Harga</th>
+											<th scope="col" class="fst-italic fw-normal">Harga (Rp.)</th>
 											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
 										</tr>
 									</thead>

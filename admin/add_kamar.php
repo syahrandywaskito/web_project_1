@@ -87,28 +87,58 @@ $username = $_SESSION['username'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Home</h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Add Data Kamar</h3>
           </header>
           <!--  -->
 
           <hr>
+
+          <!-- breadcump -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb font-montserrat">
+              <li class="breadcrumb-item"><a href="show_kamar.php">Kamar</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add Data Kamar</li>
+            </ol>
+          </nav>
+          <!--  -->
+          
           <!-- content -->
           <main>
-            <header>
-              <div class="container mt-5">
-                <div class="text-center text-dark font-montserrat">
-                  <h2 class="fw-light">Welcome <?php echo $username?></h2>
-                  <p class="lead">Welcome to Admin Workspace, Enjoy!!</p>
-                </div>
+          <div class="mt-5 font-montserrat">
+              <div class="pb-2">
+                <p class="lead fw-semibold">Input Data</p>
               </div>
-            </header>
+              <form action="process/add_process_kamar.php" method="post">
+                <div class="row mb-3">
+                  <label for="no_kamar" class="col-sm-2 col-form-label">No Kamar</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="no_kamar" name="no_kamar">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="jenis_kamar" class="col-sm-2 col-form-label">Jenis kamar</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="jenis_kamar" name="jenis_kamar">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="harga" class="col-sm-2 col-form-label">Harga Kamar <em>(Rp.)</em></label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="harga" name="harga">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark btn-md">Submit</button>
+              </form>
+            </div>
           </main>
           <!--  -->
 				</div>
 			</div>
   	</div>
 	</div>
-  
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-	</body>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
 </html>

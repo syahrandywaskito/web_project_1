@@ -87,7 +87,7 @@ $username = $_SESSION['username'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Add Data Transaksi</h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Add Data Karyawan</h3>
           </header>
           <!--  -->
 
