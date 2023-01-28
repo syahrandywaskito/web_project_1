@@ -193,7 +193,7 @@ $username = $_SESSION['username'];
 																	<a href='update_transaksi.php?no_transaksi=$row[no_transaksi]' class='btn btn-dark btn-md'>Update</a>
 															</td>
 															<td>
-																	<a href='delete_transaksi.php?no_transaksi=$row[no_transaksi]' class='btn btn-dark btn-md'>Delete</a>
+																	<a href='delete/delete_transaksi.php?no_transaksi=$row[no_transaksi]' class='btn btn-dark btn-md'>Delete</a>
 															</td>
 														</tr>";
 											$no++;
