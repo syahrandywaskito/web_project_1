@@ -105,6 +105,16 @@ $id = $_GET['id_karyawan'];
           </nav>
           <!--  -->
           
+          <!-- php -->
+          <?php
+
+          include "../koneksi.php";
+          $code = $_GET['id_karyawan'];
+          $query = mysqli_query($koneksi, "SELECT * FROM karyawan WHERE id_karyawan = '$code'");
+          $row = mysqli_fetch_array($query);
+          ?>
+          <!-- // -->
+
           <!-- content -->
           <main>
             <div class="mt-5 font-montserrat">
@@ -115,13 +125,13 @@ $id = $_GET['id_karyawan'];
                 <div class="row mb-3">
                   <label for="id_karyawan" class="col-sm-2 col-form-label">ID Karyawan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="id_karyawan" name="id_karyawan">
+                    <input type="text" class="form-control" id="id_karyawan" name="id_karyawan" value="<?php echo $row['id_karyawan']; ?>" readonly>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="nama_karyawan" class="col-sm-2 col-form-label">Nama Karyawan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nama_karyawan" name="nama_karyawan">
+                    <input type="text" class="form-control" id="nama_karyawan" name="nama_karyawan" value="<?php echo $row['nama_karyawan']; ?>">
                   </div>
                 </div>
                 <fieldset class="row mb-3">

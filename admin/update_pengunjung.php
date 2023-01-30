@@ -1,6 +1,9 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
+
+// GET PULL
+$id = $_GET['id_pengunjung'];
 ?>
 
 <!doctype html>
@@ -87,7 +90,7 @@ $username = $_SESSION['username'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Add Data Pengunjung</h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Karyawan <strong><?php echo $id ?></strong></h3>
           </header>
           <!--  -->
 
@@ -96,46 +99,56 @@ $username = $_SESSION['username'];
           <!-- breadcump -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb font-montserrat">
-              <li class="breadcrumb-item"><a href="show_pengunjung.php">Pengunjung</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Add Data Pengunjung</li>
+              <li class="breadcrumb-item"><a href="show_karyawan.php">Karyawan</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Update Data Karyawan <strong><?php echo $id ?></strong></li>
             </ol>
           </nav>
           <!--  -->
           
+          <!-- php -->
+          <?php
+
+          include "../koneksi.php";
+          $code = $_GET['id_pengunjung'];
+          $query = mysqli_query($koneksi, "SELECT * FROM pengunjung WHERE id_pengunjung = '$code'");
+          $row = mysqli_fetch_array($query);
+          ?>
+          <!-- // -->
+
           <!-- content -->
           <main>
             <div class="mt-5 font-montserrat">
               <div class="pb-2">
                 <p class="lead fw-semibold">Update Data</p>
               </div>
-                <form class="row g-3" action="add/add_process_pengunjung.php" method="post">
+              <form class="row g-3" action="update/update_process_pengunjung.php" method="post">
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="id" name="id_pengunjung" placeholder="name@example.com">
+                      <input type="text" class="form-control" id="id" name="id_pengunjung" placeholder="name@example.com" value="<?php echo $row['id_pengunjung']; ?>">
                       <label for="id">ID Pengunjung</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="nama" name="nama_pengunjung" placeholder="name@example.com">
+                      <input type="text" class="form-control" id="nama" name="nama_pengunjung" placeholder="name@example.com" value="<?php echo $row['nama_pengunjung']; ?>">
                       <label for="nama">Nama Pengunjung</label>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a comment here" id="alamat" name="alamat"></textarea>
+                      <textarea class="form-control" placeholder="Leave a comment here" id="alamat" name="alamat"><?php echo $row['alamat'] ?></textarea>
                       <label for="alamat">Alamat</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="id" name="no_telepon" placeholder="name@example.com">
+                      <input type="text" class="form-control" id="id" name="no_telepon" placeholder="name@example.com" value="<?php echo $row['no_telepon']; ?>">
                       <label for="id">Nomor Telepon</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="nama" name="no_ktp" placeholder="name@example.com">
+                      <input type="text" class="form-control" id="nama" name="no_ktp" placeholder="name@example.com" value="<?php echo $row['no_ktp']; ?>">
                       <label for="nama">Nomor KTP</label>
                     </div>
                   </div>
@@ -162,7 +175,7 @@ $username = $_SESSION['username'];
 			</div>
   	</div>
 	</div>
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

@@ -1,6 +1,9 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
+
+// GET PULL
+$em = $_GET['email'];
 ?>
 
 <!doctype html>
@@ -87,7 +90,7 @@ $username = $_SESSION['username'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Add Data Pengunjung</h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Karyawan <strong><?php echo $em ?></strong></h3>
           </header>
           <!--  -->
 
@@ -96,47 +99,51 @@ $username = $_SESSION['username'];
           <!-- breadcump -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb font-montserrat">
-              <li class="breadcrumb-item"><a href="show_pengunjung.php">Pengunjung</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Add Data Pengunjung</li>
+              <li class="breadcrumb-item"><a href="show_karyawan.php">Karyawan</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Update Data Website User <strong><?php echo $em ?></strong></li>
             </ol>
           </nav>
           <!--  -->
           
+          <!-- php -->
+          <?php
+
+          include "../koneksi.php";
+          $code = $_GET['email'];
+          $query = mysqli_query($koneksi, "SELECT * FROM user WHERE email = '$code'");
+          $row = mysqli_fetch_array($query);
+          ?>
+          <!-- // -->
+
           <!-- content -->
           <main>
             <div class="mt-5 font-montserrat">
               <div class="pb-2">
-                <p class="lead fw-semibold">Update Data</p>
+                <p class="lead fw-semibold">Input Data</p>
               </div>
-                <form class="row g-3" action="add/add_process_pengunjung.php" method="post">
+              <form action="update/update_process_website_user.php" method="post" class="row g-3">
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="id" name="id_pengunjung" placeholder="name@example.com">
-                      <label for="id">ID Pengunjung</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="<?php echo $row['email']; ?>" readonly>
+                      <label for="email">Email</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="nama" name="nama_pengunjung" placeholder="name@example.com">
-                      <label for="nama">Nama Pengunjung</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a comment here" id="alamat" name="alamat"></textarea>
-                      <label for="alamat">Alamat</label>
+                      <input type="text" class="form-control" id="nama" name="nama_lengkap" placeholder="name@example.com" value="<?php echo $row['nama_lengkap']; ?>">
+                      <label for="nama">Nama User</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="id" name="no_telepon" placeholder="name@example.com">
-                      <label for="id">Nomor Telepon</label>
+                      <input type="text" class="form-control" id="id" name="username" placeholder="name@example.com" value="<?php echo $row['username']; ?>">
+                      <label for="id">Username</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="nama" name="no_ktp" placeholder="name@example.com">
-                      <label for="nama">Nomor KTP</label>
+                      <input type="text" class="form-control" id="nama" name="password" placeholder="name@example.com" value="<?php echo $row['pwd']; ?>">
+                      <label for="nama">Password</label>
                     </div>
                   </div>
                   <div class="form-check">
@@ -162,7 +169,7 @@ $username = $_SESSION['username'];
 			</div>
   	</div>
 	</div>
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
