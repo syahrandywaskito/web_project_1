@@ -9,6 +9,7 @@ $username = $_SESSION['username'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arjuna Resort | Admin "<?php echo $username ?>"</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="../img/Arjuna_logo_favicon_2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
@@ -104,7 +105,79 @@ $username = $_SESSION['username'];
           
           <!-- content -->
           <main>
-            
+            <div class="mt-5 font-montserrat">
+              <div class="pb-2">
+                <p class="lead">Input Data</p>
+              </div>
+                <form class="row g-3">
+                  <div class="col-12">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="no_transaksi" placeholder="name@example.com">
+                      <label for="no_transaksi">No. Transaksi</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <select class="form-select" id="id_pengunjung" aria-label="Floating label select example">
+                        <option selected>---</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="id_pengunjung">ID Pengunjung</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <select class="form-select" id="id_karyawan" aria-label="Floating label select example">
+                        <option selected>---</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="id_karyawan">ID karyawan</label>
+                    </div>
+                  </div>
+
+                  <!-- dynamic input field -->
+                  <div class="col-12">
+                    <div id="row">
+                      <div class="input-group mb-3">
+                        <div class="form-floating">
+                          <select class="form-select" id="kamar" aria-label="Floating label select example">
+                            <option selected>---</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <label for="kamar">Kamar</label>
+                        </div>
+                        <button class="btn btn-dark" type="button" id="rowAdder">+</button>
+                        <button class="btn btn-dark" type="button" id="deleteRow">-</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12" id="newInput"></div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="date" class="form-control" id="no_transaksi" placeholder="name@example.com">
+                      <label for="no_transaksi">Tanggal Masuk</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                      <input type="date" class="form-control" id="no_transaksi" placeholder="name@example.com">
+                      <label for="no_transaksi">Tanggal Keluar</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-dark btn-md">Submit</button>
+                  </div>
+              </form>
+            </div>
           </main>
           <!--  -->
 				</div>
@@ -112,6 +185,33 @@ $username = $_SESSION['username'];
   	</div>
 	</div>
     
+  <!-- Personal JS Script -->
+  <script>
+    $("#rowAdder").click(function(){
+      newRowAdd = 
+      '<div id="row">' +
+      '<div class="input-group mb-3">' + 
+      '<div class="form-floating">' +
+      '<select class="form-select" id="kamar" aria-label="Floating label select example">' +
+      '<option selected>---</option>' +
+      '<option value="1">One</option>' +
+      '<option value="2">Two</option>' +
+      '<option value="3">Three</option>' +
+      '</select>' +
+      '<label for="kamar">Kamar</label>' +
+      '</div>' +
+      '<button class="btn btn-dark" type="button" id="rowAdder">+</button>' +
+      '<button class="btn btn-dark" type="button" id="deleteRow">-</button>' +
+      '</div> </div>';
+
+      $('#newInput').append(newRowAdd);
+    });
+
+    $("body").on("click", "#deleteRow", function(){
+      $(this).parents("#row").remove();
+    })
+  </script>
+  <!-- // -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>

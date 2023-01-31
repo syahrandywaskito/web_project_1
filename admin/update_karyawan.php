@@ -119,7 +119,7 @@ $id = $_GET['id_karyawan'];
           <main>
             <div class="mt-5 font-montserrat">
               <div class="pb-2">
-                <p class="lead fw-semibold">Input Data</p>
+                <p class="lead fw-semibold">Update Data</p>
               </div>
               <form action="update/update_process_karyawan.php" method="post">
                 <div class="row mb-3">

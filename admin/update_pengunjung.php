@@ -90,7 +90,7 @@ $id = $_GET['id_pengunjung'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Karyawan <strong><?php echo $id ?></strong></h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Pengunjung</strong></h3>
           </header>
           <!--  -->
 
@@ -99,8 +99,8 @@ $id = $_GET['id_pengunjung'];
           <!-- breadcump -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb font-montserrat">
-              <li class="breadcrumb-item"><a href="show_karyawan.php">Karyawan</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Update Data Karyawan <strong><?php echo $id ?></strong></li>
+              <li class="breadcrumb-item"><a href="show_pengunjung.php">Pengunjung</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Update Data Pengunjung <strong><?php echo $id ?></strong></li>
             </ol>
           </nav>
           <!--  -->

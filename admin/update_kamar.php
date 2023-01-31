@@ -90,7 +90,7 @@ $no = $_GET['no_kamar'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Karyawan <strong><?php echo $no ?></strong></h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Kamar</h3>
           </header>
           <!--  -->
 
@@ -99,8 +99,8 @@ $no = $_GET['no_kamar'];
           <!-- breadcump -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb font-montserrat">
-              <li class="breadcrumb-item"><a href="show_karyawan.php">Karyawan</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Update Data Karyawan <strong><?php echo $no ?></strong></li>
+              <li class="breadcrumb-item"><a href="show_kamar.php">Kamar</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Update Data Kamar <strong><?php echo $no ?></strong></li>
             </ol>
           </nav>
           <!--  -->
@@ -119,7 +119,7 @@ $no = $_GET['no_kamar'];
           <main>
             <div class="mt-5 font-montserrat">
               <div class="pb-2">
-                <p class="lead fw-semibold">Input Data</p>
+                <p class="lead fw-semibold">Update Data</p>
               </div>
               <form action="update/update_process_kamar.php" method="post">
                 <div class="row mb-3">

@@ -90,7 +90,7 @@ $em = $_GET['email'];
 
           <!-- header -->
           <header class="mt-4">
-            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Karyawan <strong><?php echo $em ?></strong></h3>
+            <h3 class="fw-light font-montserrat">Admin Workspace | Update Data Website User</strong></h3>
           </header>
           <!--  -->
 
@@ -99,7 +99,7 @@ $em = $_GET['email'];
           <!-- breadcump -->
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb font-montserrat">
-              <li class="breadcrumb-item"><a href="show_karyawan.php">Karyawan</a></li>
+              <li class="breadcrumb-item"><a href="show_website_user.php">Website User</a></li>
               <li class="breadcrumb-item active" aria-current="page">Update Data Website User <strong><?php echo $em ?></strong></li>
             </ol>
           </nav>
@@ -119,7 +119,7 @@ $em = $_GET['email'];
           <main>
             <div class="mt-5 font-montserrat">
               <div class="pb-2">
-                <p class="lead fw-semibold">Input Data</p>
+                <p class="lead fw-semibold">Update Data</p>
               </div>
               <form action="update/update_process_website_user.php" method="post" class="row g-3">
                   <div class="col-md-6">
