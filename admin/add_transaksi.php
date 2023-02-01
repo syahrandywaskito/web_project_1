@@ -109,31 +109,43 @@ $username = $_SESSION['username'];
               <div class="pb-2">
                 <p class="lead">Input Data</p>
               </div>
-                <form class="row g-3">
+                <form class="row g-3" action="add/add_process_transaksi.php" method="post">
                   <div class="col-12">
                     <div class="form-floating mb-3">
-                      <input type="email" class="form-control" id="no_transaksi" placeholder="name@example.com">
+                      <input type="text" class="form-control" name="no_transaksi" id="no_transaksi" placeholder="name@example.com">
                       <label for="no_transaksi">No. Transaksi</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating">
-                      <select class="form-select" id="id_pengunjung" aria-label="Floating label select example">
+                      <select class="form-select" name="id_pengunjung" id="id_pengunjung" aria-label="Floating label select example">
                         <option selected>---</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <?php
+
+                        include "../koneksi.php";
+                        $id_pengunjung = mysqli_query($koneksi, "SELECT * FROM pengunjung");
+                        foreach ($id_pengunjung as $row) {
+                          echo "<option value=" . $row['id_pengunjung'] . ">" . $row['id_pengunjung'] . " : " . $row['nama_pengunjung'] . "</option>";
+                        }
+
+                        ?>
                       </select>
                       <label for="id_pengunjung">ID Pengunjung</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating">
-                      <select class="form-select" id="id_karyawan" aria-label="Floating label select example">
+                      <select class="form-select" name="id_karyawan" id="id_karyawan" aria-label="Floating label select example">
                         <option selected>---</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <?php
+
+                        include "../koneksi.php";
+                        $id_karyawan = mysqli_query($koneksi, "SELECT * FROM karyawan");
+                        foreach ($id_karyawan as $row) {
+                          echo "<option value=" . $row['id_karyawan'] . ">" . $row['id_karyawan'] . " : " . $row['nama_karyawan'] . "</option>";
+                        }  
+
+                        ?>
                       </select>
                       <label for="id_karyawan">ID karyawan</label>
                     </div>
@@ -144,11 +156,17 @@ $username = $_SESSION['username'];
                     <div id="row">
                       <div class="input-group mb-3">
                         <div class="form-floating">
-                          <select class="form-select" id="kamar" aria-label="Floating label select example">
+                          <select class="form-select" name="data_kamar[]" id="kamar" aria-label="Floating label select example">
                             <option selected>---</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <?php
+
+                            include "../koneksi.php";
+                            $no_kamar = mysqli_query($koneksi, "SELECT * FROM kamar");
+                            foreach ($no_kamar as $row) {
+                              echo "<option value=" . $row['no_kamar'] . ">" . $row['no_kamar'] . " : " . $row['jenis_kamar'] . ", Rp. " . $row['harga'] . "</option>";
+                            }
+
+                            ?>
                           </select>
                           <label for="kamar">Kamar</label>
                         </div>
@@ -160,16 +178,15 @@ $username = $_SESSION['username'];
 
                   <div class="col-12" id="newInput"></div>
 
-
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="date" class="form-control" id="no_transaksi" placeholder="name@example.com">
+                      <input type="date" class="form-control" name="tgl_masuk" id="no_transaksi" placeholder="name@example.com">
                       <label for="no_transaksi">Tanggal Masuk</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating mb-3">
-                      <input type="date" class="form-control" id="no_transaksi" placeholder="name@example.com">
+                      <input type="date" class="form-control" name="tgl_keluar" id="no_transaksi" placeholder="name@example.com">
                       <label for="no_transaksi">Tanggal Keluar</label>
                     </div>
                   </div>
@@ -192,11 +209,13 @@ $username = $_SESSION['username'];
       '<div id="row">' +
       '<div class="input-group mb-3">' + 
       '<div class="form-floating">' +
-      '<select class="form-select" id="kamar" aria-label="Floating label select example">' +
+      '<select class="form-select" name="data_kamar[]" id="kamar" aria-label="Floating label select example">' +
       '<option selected>---</option>' +
-      '<option value="1">One</option>' +
-      '<option value="2">Two</option>' +
-      '<option value="3">Three</option>' +
+      '<?php include "../koneksi.php"; ?>' +
+      '<?php $no_kamar = mysqli_query($koneksi, "SELECT * FROM kamar"); ?>' +
+      '<?php foreach ($no_kamar as $row) {
+                      echo "<option value=" . $row['no_kamar'] . ">" . $row['no_kamar'] . " : " . $row['jenis_kamar'] . ", Rp. " . $row['harga'] . "</option>";
+                    }   ?>' +
       '</select>' +
       '<label for="kamar">Kamar</label>' +
       '</div>' +

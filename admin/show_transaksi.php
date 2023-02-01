@@ -123,7 +123,7 @@ $username = $_SESSION['username'];
 														<option value="jumlah_kamar">Jumlah Kamar</option>
 														<option value="tgl_masuk">Tanggal Masuk</option>
 														<option value="tgl_keluar">Tanggal Keluar</option>
-														<option value="lama_nginap">Lama Menginap</option>
+														<option value="lama_nginap">Lama Menginap <em>(Hari)</em></option>
 														<option value="total_harga">Total Harga</option>
 													</select>
 												</div>
@@ -152,7 +152,7 @@ $username = $_SESSION['username'];
 											<th scope="col" class="fst-italic fw-normal">Jumlah Kamar</th>
 											<th scope="col" class="fst-italic fw-normal">Tanggal Masuk</th>
 											<th scope="col" class="fst-italic fw-normal">Tanggal Keluar</th>
-											<th scope="col" class="fst-italic fw-normal">Lama Menginap</th>
+											<th scope="col" class="fst-italic fw-normal">Lama Menginap <em>(Hari)</em></th>
 											<th scope="col" class="fst-italic fw-normal">Total Harga</th>
 											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
 										</tr>
