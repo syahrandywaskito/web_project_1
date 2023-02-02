@@ -86,8 +86,16 @@ $username = $_SESSION['username'];
 					<div class="container">
 						
 						<!-- header page -->
-						<header class="mt-4">
-							<h3 class="fw-light font-montserrat">Admin Workspace | Pengunjung</h3>
+						<header class="mt-4 row">
+							<div class="col">
+								<h3 class="fw-light font-montserrat">Admin Workspace | Pengunjung</h3>
+							</div>
+							<div class="col d-flex justify-content-end align-items-center">
+								<div class="font-montserrat">
+									<div id="hari"></div>
+									<div id="clock"></div>
+								</div>
+							</div>
 						</header>
 						<!--  -->
 						<hr>
@@ -209,5 +217,8 @@ $username = $_SESSION['username'];
 		</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+		
+		<!-- personal JS -->
+		<script src="clock.js"></script>
   </body>
 </html>
