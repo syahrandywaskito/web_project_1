@@ -32,10 +32,24 @@ $username = $_SESSION['username'];
               </a>
             </li>
             <li class="nav-item">
-          		<a href="show_transaksi.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
-							  <i class="fs-4 bi bi-credit-card"></i> 
-                <span class="ms-1 d-none d-sm-inline">Transaksi</span> 
-              </a>
+              <div class="dropdown">
+                <a class="btn btn-dark btn-md dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fs-4 bi bi-credit-card"></i> 
+                  <span class="ms-1 d-none d-sm-inline">Opsi</span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-light text-small shadow" style="background-color: antiquewhite;">
+                  <li>
+                    <a class="dropdown-item" href="show_transaksi.php">Transaksi</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="show_detail.php">Detail Transaksi</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a href="show_pengunjung.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
@@ -110,6 +124,30 @@ $username = $_SESSION['username'];
                 </div>
               </div>
             </header>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </main>
           <!--  -->
 				</div>

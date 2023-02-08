@@ -28,8 +28,7 @@ switch (hari) {
     hari = "Minggu";
 }
 
-let tampilDate = hari + ", " + tanggal + " - " + bulan + " - " + tahun;
-document.getElementById("hari").innerHTML = tampilDate;
+document.getElementById("hari").innerHTML = hari + ", " + tanggal + " - " + bulan + " - " + tahun;
 
 // jam 
 setInterval(function(){

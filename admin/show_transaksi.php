@@ -1,6 +1,7 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
+
 ?>
 
 <!doctype html>
@@ -32,10 +33,24 @@ $username = $_SESSION['username'];
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="show_transaksi.php" class="nav-link align-middle p-2 btn btn-dark btn-md active" aria-current="page">
-									<i class="fs-4 bi bi-credit-card"></i> 
-									<span class="ms-1 d-none d-sm-inline">Transaksi</span> 
-								</a>
+								<div class="dropdown">
+									<a class="btn btn-dark btn-md dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fs-4 bi bi-credit-card"></i> 
+										<span class="ms-1 d-none d-sm-inline">Opsi</span>
+									</a>
+
+									<ul class="dropdown-menu dropdown-menu-light text-small shadow" style="background-color: antiquewhite;">
+										<li>
+											<a class="dropdown-item" href="show_transaksi.php">Transaksi</a>
+										</li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li>
+											<a class="dropdown-item" href="show_detail.php">Detail Transaksi</a>
+										</li>
+									</ul>
+								</div>
 							</li>
 							<li class="nav-item">
 								<a href="show_pengunjung.php" class="nav-link align-middle p-2 btn btn-dark btn-md">
@@ -162,6 +177,7 @@ $username = $_SESSION['username'];
 											<th scope="col" class="fst-italic fw-normal">Tanggal Keluar</th>
 											<th scope="col" class="fst-italic fw-normal">Lama Menginap <em>(Hari)</em></th>
 											<th scope="col" class="fst-italic fw-normal">Total Harga</th>
+											<th scope="col" class="fst-italic fw-normal">Detail</th>
 											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
 										</tr>
 									</thead>
@@ -197,6 +213,9 @@ $username = $_SESSION['username'];
 															<td>" . $row['tgl_keluar'] . "</td>
 															<td>" . $row['lama_nginap'] . "</td>
 															<td>" . $row['total_harga'] . "</td>
+															<td>
+																	<a href='detail_page.php?no_transaksi=$row[no_transaksi]' class='btn btn-dark btn-md'>Detail</a>
+															</td>
 															<td>
 																	<a href='update_transaksi.php?no_transaksi=$row[no_transaksi]' class='btn btn-dark btn-md'>Update</a>
 															</td>
