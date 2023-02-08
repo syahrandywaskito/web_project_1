@@ -102,7 +102,7 @@ $username = $_SESSION['username'];
           <!-- header -->
           <header class="mt-4 row">
             <div class="col">
-              <h3 class="fw-light font-montserrat">Admin Workspace | Home</h3>
+              <h3 class="fw-light font-montserrat">Admin Workspace | Detail Transaksi</h3>
             </div>
             <div class="col d-flex justify-content-end align-items-center">
               <div class="font-montserrat">
@@ -113,28 +113,112 @@ $username = $_SESSION['username'];
           </header>
           <!--  -->
 
-          <hr>
-          <!-- content -->
-          <main>
-            <header>
-              <div class="container mt-5">
-                <div class="text-center text-dark font-montserrat">
-                  <h2 class="fw-light">Welcome <?php echo $username?></h2>
-                  <p class="lead">Welcome to Admin Workspace, Enjoy!!</p>
-                </div>
-              </div>
-            </header>
+            <hr>
+            <!-- breadcrump -->
+            <nav aria-label="breadcrumb">
+							<ol class="breadcrumb font-montserrat">
+								<li class="breadcrumb-item active" aria-current="page">Detail Transaksi</li>
+							</ol>
+						</nav>
+						<!--  -->
 
-          </main>
-          <!--  -->
+						<!-- Content -->
+						<main class="mt-3">
+
+							<section class="mt-4">
+										<form action="" method="post">
+											<div class="d-flex align-items-center flex-wrap gap-2 font-montserrat">
+												<div class="">
+													<label for="">Cari Berdasarkan</label>
+												</div>
+												<div class="">
+													<select name="pilih" id="search" class="btn btn-dark btn-md">
+														<option value="">------</option>
+														<option value="id_karyawan">ID Detail Transaksi</option>
+														<option value="nama_karyawan">No Transaksi</option>
+														<option value="jenis_kelamin">No kamar</option>
+													</select>
+												</div>
+												<div class="">
+													<input type="text" name="textcari" class="form-control-sm">
+												</div>
+												<div class="">
+													<input type="submit" name="cari" value="Cari" class="btn btn-dark btn-md">	
+												</div>
+												<div class="">
+													<input type="submit" name="semua" value="Tampilkan Semua" class="btn btn-dark btn-md">
+												</div>
+											</div>
+										</form>
+							</section>
+
+							<!-- Table -->
+							<section class="table-responsive-md font-montserrat mt-4">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr>
+											<th scope="col" class="fst-italic fw-normal">No</th>
+											<th scope="col" class="fst-italic fw-normal">ID Detail Transaksi</th>
+											<th scope="col" class="fst-italic fw-normal">No Transaksi</th>
+											<th scope="col" class="fst-italic fw-normal">No Kamar</th>
+											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- php search -->
+										<?php
+										include '../koneksi.php';
+										$input_detail = "";
+										if (isset($_POST['cari'])) {
+											$opsi = $_POST['pilih'];
+											$nama_data = $_POST['textcari'];
+											$input_detail = mysqli_query($koneksi, "SELECT * FROM detail_transaksi WHERE $opsi LIKE '%$nama_data%'");
+										}
+										else{
+											$input_detail = mysqli_query($koneksi, "SELECT * FROM detail_transaksi");
+										}
+										?>
+										<!--  -->
+
+										<!-- php dynamic table -->
+										<?php
+
+										include "../koneksi.php";
+										$no = 1;
+										foreach ($input_detail as $row) {
+											echo "<tr>
+															<td>$no</td>
+															<td>" . $row['id_dtl_transaksi'] . "</td>
+															<td>" . $row['no_transaksi'] . "</td>
+															<td>" . $row['no_kamar'] . "</td>
+															<td>
+																	<a href='update_detail.php?id_dtl_transaksi=$row[id_dtl_transaksi]' class='btn btn-dark btn-md'>Update</a>
+															</td>
+															<td>
+																	<a href='delete/delete_detail.php?id_dtl_transaksi=$row[id_dtl_transaksi]' class='btn btn-dark btn-md'>Delete</a>
+															</td>
+														</tr>";
+											$no++;
+										}
+										
+										?>
+										<!--  -->
+									</tbody>
+								</table>
+							</section>
+							<!--  -->
+
+						</main>
+						<!--  -->
+					</div>
 				</div>
 			</div>
-  	</div>
-	</div>
+		</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-  <!-- personal js -->
-  <script src="clock.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- personal js -->
+    <script src="clock.js"></script>
+  </body>
 </html>

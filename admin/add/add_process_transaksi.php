@@ -43,7 +43,7 @@ for ($i=0; $i < count($array_kamar); $i++) {
 }
 // --> ... <--
 
-$query = "INSERT INTO transaksi SET
+$query_transaksi = "INSERT INTO transaksi SET
           no_transaksi = '$no',
           id_pengunjung = '$id_pengunjung',
           id_karyawan = '$id_karyawan',
@@ -53,7 +53,17 @@ $query = "INSERT INTO transaksi SET
           lama_nginap = '$lama_nginap',
           total_harga = '$total_harga'";
 
-mysqli_query($koneksi, $query);
+// process for detail transaksi 
+$no_kamar = implode(" - ", $array_kamar);
+$id_dtl = bin2hex(random_bytes(5));
+$query_detail_transaksi = "INSERT INTO detail_transaksi SET
+                           id_dtl_transaksi = '$id_dtl',
+                           no_transaksi = '$no',
+                           no_kamar = '$no_kamar'";
+
+
+mysqli_query($koneksi, $query_transaksi);
+mysqli_query($koneksi, $query_detail_transaksi);
 header("location:../show_transaksi.php");
 
 ?>

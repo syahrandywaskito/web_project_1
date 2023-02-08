@@ -113,7 +113,7 @@ $username = $_SESSION['username'];
 						<!--  -->
 						<hr>
 
-							<!-- breadcrump -->
+						<!-- breadcrump -->
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb font-montserrat">
 								<li class="breadcrumb-item active" aria-current="page">Karyawan</li>
