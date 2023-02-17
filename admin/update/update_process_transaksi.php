@@ -54,7 +54,18 @@ $query = "UPDATE transaksi SET
           total_harga = '$total_harga'
           WHERE no_transaksi = '$no'";
 
+// update detail transaksi
+$detail_transaksi = mysqli_query($koneksi, "SELECT * FROM detail_transaksi WHERE no_transaksi = '$no'");
+$array_detail = mysqli_fetch_array($detail_transaksi);
+$no_kamar_detail = implode(" - ", $array_kamar);
+$query_detail = "UPDATE detail_transaksi SET
+                 id_dtl_transaksi = '$array_detail[0]',
+                 no_transaksi = '$array_detail[1]',
+                 no_kamar = '$no_kamar_detail'
+                 WHERE id_dtl_transaksi = '$array_detail[0]'";
+
 mysqli_query($koneksi, $query);
+mysqli_query($koneksi, $query_detail);
 header("location:../show_transaksi.php");
 
-?>s
+?>

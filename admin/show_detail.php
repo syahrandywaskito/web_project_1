@@ -161,7 +161,6 @@ $username = $_SESSION['username'];
 											<th scope="col" class="fst-italic fw-normal">ID Detail Transaksi</th>
 											<th scope="col" class="fst-italic fw-normal">No Transaksi</th>
 											<th scope="col" class="fst-italic fw-normal">No Kamar</th>
-											<th scope="col" colspan="2" class="fst-italic fw-normal">Opsi</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -192,11 +191,6 @@ $username = $_SESSION['username'];
 															<td>" . $row['no_transaksi'] . "</td>
 															<td>" . $row['no_kamar'] . "</td>
 															<td>
-																	<a href='update_detail.php?id_dtl_transaksi=$row[id_dtl_transaksi]' class='btn btn-dark btn-md'>Update</a>
-															</td>
-															<td>
-																	<a href='delete/delete_detail.php?id_dtl_transaksi=$row[id_dtl_transaksi]' class='btn btn-dark btn-md'>Delete</a>
-															</td>
 														</tr>";
 											$no++;
 										}
