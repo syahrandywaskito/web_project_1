@@ -24,7 +24,7 @@ switch (hari) {
   case 6 :
     hari = "Sabtu";
     break;
-  case 7 :
+  default :
     hari = "Minggu";
 }
 
