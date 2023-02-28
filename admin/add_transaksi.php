@@ -144,7 +144,7 @@ $username = $_SESSION['username'];
                         <option selected>---</option>
                         <?php
 
-                        include "../koneksi.php";
+                        require("../app/koneksi.php");
                         $id_pengunjung = mysqli_query($koneksi, "SELECT * FROM pengunjung");
                         foreach ($id_pengunjung as $row) {
                           echo "<option value=" . $row['id_pengunjung'] . ">" . $row['id_pengunjung'] . " : " . $row['nama_pengunjung'] . "</option>";
@@ -161,7 +161,7 @@ $username = $_SESSION['username'];
                         <option selected>---</option>
                         <?php
 
-                        include "../koneksi.php";
+                        require("../app/koneksi.php");
                         $id_karyawan = mysqli_query($koneksi, "SELECT * FROM karyawan");
                         foreach ($id_karyawan as $row) {
                           echo "<option value=" . $row['id_karyawan'] . ">" . $row['id_karyawan'] . " : " . $row['nama_karyawan'] . "</option>";
@@ -182,7 +182,7 @@ $username = $_SESSION['username'];
                             <option selected>---</option>
                             <?php
 
-                            include "../koneksi.php";
+                            require("../app/koneksi.php");
                             $no_kamar = mysqli_query($koneksi, "SELECT * FROM kamar");
                             foreach ($no_kamar as $row) {
                               echo "<option value=" . $row['no_kamar'] . ">" . $row['no_kamar'] . " : " . $row['jenis_kamar'] . ", Rp. " . $row['harga'] . "</option>";

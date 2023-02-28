@@ -130,7 +130,7 @@ $no = $_GET['no_kamar'];
           <!-- php -->
           <?php
 
-          include "../koneksi.php";
+          require("../app/koneksi.php");
           $code = $_GET['no_kamar'];
           $query = mysqli_query($koneksi, "SELECT * FROM kamar WHERE no_kamar = '$code'");
           $row = mysqli_fetch_array($query);

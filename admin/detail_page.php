@@ -128,7 +128,7 @@ $no = $_GET['no_transaksi'];
 					<!--  -->
 
           <?php
-          include "../koneksi.php";
+          require("../app/koneksi.php");
           $input_transaksi = $_GET['no_transaksi'];
 
           // table detail_transaksi

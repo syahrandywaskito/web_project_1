@@ -166,7 +166,7 @@ $username = $_SESSION['username'];
 									<tbody>
 										<!-- php search -->
 										<?php
-										include '../koneksi.php';
+										require("../app/koneksi.php");
 										$input_detail = "";
 										if (isset($_POST['cari'])) {
 											$opsi = $_POST['pilih'];
@@ -182,7 +182,7 @@ $username = $_SESSION['username'];
 										<!-- php dynamic table -->
 										<?php
 
-										include "../koneksi.php";
+										require("../app/koneksi.php");
 										$no = 1;
 										foreach ($input_detail as $row) {
 											echo "<tr>

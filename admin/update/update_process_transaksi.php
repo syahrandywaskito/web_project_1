@@ -1,6 +1,6 @@
 <?php
 
-include "../../koneksi.php";
+require("../../app/koneksi.php");
 $no = $_POST['no_transaksi'];
 $id_pengunjung = $_POST['id_pengunjung'];
 $id_karyawan = $_POST['id_karyawan'];

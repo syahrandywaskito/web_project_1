@@ -130,7 +130,7 @@ $id = $_GET['id_karyawan'];
           <!-- php -->
           <?php
 
-          include "../koneksi.php";
+          require("../app/koneksi.php");
           $code = $_GET['id_karyawan'];
           $query = mysqli_query($koneksi, "SELECT * FROM karyawan WHERE id_karyawan = '$code'");
           $row = mysqli_fetch_array($query);

@@ -3,7 +3,7 @@
 // session
 session_start();
 
-include "koneksi.php";
+require("koneksi.php");
 $username = $_POST['username'];
 $pwd = $_POST['password'];
 
@@ -15,14 +15,14 @@ if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
         $_SESSION['pwd'] = $row['pwd'];
-        header("location:user/index.php");
+        header("location:../user/index.php");
 
 }
     
 elseif (($username == "syahrandy") AND ($pwd == "toor")) {
         $_SESSION['username'] = $username;
         $_SESSION['pwd'] = $pwd;
-        header("location:admin/index.php");
+        header("location:../admin/index.php");
 }
     
 else {

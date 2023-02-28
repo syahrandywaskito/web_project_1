@@ -130,7 +130,7 @@ $no = $_GET['no_transaksi'];
           
           <?php
 
-          include "../koneksi.php";
+          require("../app/koneksi.php");
           $code = $_GET['no_transaksi'];
           $query = mysqli_query($koneksi, "SELECT * FROM transaksi WHERE no_transaksi = '$code'");
           $row_data = mysqli_fetch_array($query);

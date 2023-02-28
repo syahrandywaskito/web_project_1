@@ -130,7 +130,7 @@ $id = $_GET['id_pengunjung'];
           <!-- php -->
           <?php
 
-          include "../koneksi.php";
+          require("../app/koneksi.php");
           $code = $_GET['id_pengunjung'];
           $query = mysqli_query($koneksi, "SELECT * FROM pengunjung WHERE id_pengunjung = '$code'");
           $row = mysqli_fetch_array($query);

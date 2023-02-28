@@ -1,6 +1,6 @@
 <?php
 
-include "koneksi.php";
+require("koneksi.php");
 $email = $_POST['email'];
 $nama_lengkap = $_POST['nama_lengkap'];
 $username = $_POST['username'];

@@ -1,6 +1,6 @@
 <?php
 
-include "../../koneksi.php";
+require("../../app/koneksi.php");
 $id = $_POST['id_karyawan'];
 $nama = $_POST['nama_karyawan'];
 $jenis_kelamin = $_POST['jenis_kelamin'];

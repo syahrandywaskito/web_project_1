@@ -1,6 +1,6 @@
 <?php
 
-include "../../koneksi.php";
+require("../../app/koneksi.php");
 $code = $_GET['no_transaksi'];
 $query_transaksi = "DELETE FROM transaksi WHERE no_transaksi = '$code'";
 $query_detail = "DELETE FROM detail_transaksi WHERE no_transaksi = '$code'";

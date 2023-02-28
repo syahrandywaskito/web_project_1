@@ -1,6 +1,6 @@
 <?php
 
-include "../../koneksi.php";
+require("../../app/koneksi.php");
 $id = $_POST['id_pengunjung'];
 $nama = $_POST['nama_pengunjung'];
 $alamat = $_POST['alamat'];

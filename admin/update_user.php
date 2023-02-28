@@ -130,7 +130,7 @@ $em = $_GET['email'];
           <!-- php -->
           <?php
 
-          include "../koneksi.php";
+          require("../app/koneksi.php");
           $code = $_GET['email'];
           $query = mysqli_query($koneksi, "SELECT * FROM user WHERE email = '$code'");
           $row = mysqli_fetch_array($query);

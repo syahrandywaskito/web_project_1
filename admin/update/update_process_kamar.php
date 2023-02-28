@@ -1,6 +1,6 @@
 <?php
 
-include "../../koneksi.php";
+require("../../app/koneksi.php");
 $no = $_POST['no_kamar'];
 $jenis = $_POST['jenis_kamar'];
 $harga = $_POST['harga'];
