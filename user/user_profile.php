@@ -11,7 +11,9 @@ $username = $_SESSION['username'];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arjuna Resort | User "<?php echo $username ?>"</title>
     <link rel="icon" type="image/x-icon" href="../img/Arjuna_logo_favicon_2.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
@@ -61,10 +63,9 @@ $username = $_SESSION['username'];
 
         <!--Header User Profile -->
         <header>
-          <div class="container pt-5">
+          <div class="container" style="padding-top: 5rem;">
             <div class="text-center text-dark font-montserrat">
-              <h1 class="display-5">User Profile</h1>
-              <p class="lead">User Profile <strong><?php echo $data_user['username']?></strong></p>
+              <h3 class="fw-normal">User Profile</h3>
             </div>
             <hr>
           </div>
@@ -72,43 +73,52 @@ $username = $_SESSION['username'];
         <!--  -->
 
         <!-- User Profile -->
-         <section>
-          <div class="container font-montserrat">
-            <div class="row text-center pt-3">
-              <div class="col">
-                <img src="../img/user.png" style="width: 10rem;" class="rounded-circle shadow-sm" alt="">
+        <main class="mt-5 d-flex justify-content-center">
+            <div class="card text-center font-montserrat border border-0" style="width: 75%">
+              <div class="card-header" style="background-color:antiquewhite">
+                <h5 class="fw-normal mb-0">
+                  User Profile <strong><?php echo $data_user['username']?></strong>
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row gap-3 text-center pt-2 justify-content-center">
+                  <div class="col-md-4 rounded p-3">
+                    <h6 class="mb-1 mt-2 fw-normal">Nama User</h6>
+                    <hr>
+                    <p class="mb-0">
+                      <?php echo $data_user['nama_lengkap'] ?>
+                    </p>
+                  </div>
+                </div>
+                <div class="row gap-3 text-center pt-4 justify-content-center">
+                  <div class="col-md-4 rounded p-3">
+                    <h6 class="mb-1 mt-2 fw-normal">Email</h6>
+                    <hr>
+                    <p class="mb-0">
+                      <?php echo $data_user['email']?>
+                    </p>
+                  </div>
+                  <div class="col-md-4 rounded p-3">
+                    <h6 class="mb-1 mt-2 fw-normal">Password</h6>
+                    <hr>
+                    <div class="input-group mb-3">
+                      <input type="password" class="form-control border border-0" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" readonly value="<?php echo $data_user['pwd'] ?> " id="hs-toggle">
+                      <button class="btn btn-dark btn-md" type="button" id="button-addon2" onclick="hsToggle()"><i class="bi bi-eye" id="eye" title="Show Password"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row gap-3 text-center pt-4 justify-content-center">
+                  <div class="col-md-4 rounded p-3">
+                    <h6 class="mb-1 mt-2 fw-normal">Jenis Kelamin</h6>
+                    <hr>
+                    <p class="mb-0"> 
+                      <?php echo $data_user['jenis_kelamin'] ?>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="row gap-3 text-center pt-4 justify-content-center">
-              <div class="col-md-4 rounded p-3 shadow-sm" style="background-color: var(--bs-secondary-bg);">
-                <h4 class="mb-1 mt-2 fw-normal">Username</h4>
-                <p class="lead mb-0"><?php echo $data_user['username']?></p>
-              </div>
-              <div class="col-md-4 rounded p-3 shadow-sm" style="background-color: var(--bs-secondary-bg);">
-                <h4 class="mb-1 mt-2 fw-normal">Password</h4>
-                <p class="lead mb-0">
-                    <?php echo $data_user['pwd']?>
-                </p>
-              </div>
-            </div>
-            <div class="row gap-3 text-center pt-4 justify-content-center">
-              <div class="col-md-4 rounded p-3 shadow-sm" style="background-color: var(--bs-secondary-bg);">
-                <h4 class="mb-1 mt-2 fw-normal">Full Name</h4>
-                <p class="lead mb-0"><?php echo $data_user['nama_lengkap']?></p>
-              </div>
-              <div class="col-md-4 rounded p-3 shadow-sm" style="background-color: var(--bs-secondary-bg);">
-                <h4 class="mb-1 mt-2 fw-normal">Email</h4>
-                <p class="lead mb-0"><?php echo $data_user['email']?></p>
-              </div>
-            </div>
-            <div class="row gap-3 text-center pt-4 justify-content-center">
-              <div class="col-md-4 rounded p-3 shadow-sm" style="background-color: var(--bs-secondary-bg);">
-                <h4 class="mb-1 mt-2 fw-normal">Gender</h4>
-                <p class="lead mb-0"><?php echo $data_user['jenis_kelamin']?></p>
-              </div>
-            </div>
-          </div>
-         </section>
+          </main>
         <!--  -->
 
         <!-- footer -->
@@ -143,6 +153,25 @@ $username = $_SESSION['username'];
         <!--  -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script>
+      function hsToggle(){
+        let toggle = document.getElementById("hs-toggle");
+        let eye = document.getElementById("eye");
+        if (toggle.type === "password") {
+          toggle.type = "text";
+          eye.classList.remove("bi-eye");
+          eye.classList.add("bi-eye-slash");
+          eye.setAttribute("title", "Hide Password");
+        }
+        else{
+          toggle.type = "password";
+          eye.classList.remove("bi-eye-slash");
+          eye.classList.add("bi-eye");
+          eye.setAttribute("title", "Show Password");
+        }
+      }
+    </script>
     
   </body>
 </html>
