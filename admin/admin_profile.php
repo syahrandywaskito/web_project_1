@@ -121,7 +121,7 @@ $username = $_SESSION['username'];
               <div class="container">
                 <div class="row gap-3 justify-content-evenly">
                   <div class="col-md-4">
-                    <img src="../img/admin_profile.jpg" alt="" class="rounded img-fluid">
+                    <img src="../img/admin_profile.jpg" alt="admin_profile" class="rounded img-fluid">
                   </div>
                   <div class="col-md-4">
                     <div class="text-center font-montserrat">

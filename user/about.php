@@ -128,7 +128,7 @@ $username = $_SESSION['username'];
       <div class="container-fluid"> 
         <div class="row justify-content-center fs-5 pt-3 gap-3 md-4">
           <div class="col-md-5 text-center">
-            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 11rem;" alt="">
+            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 11rem;" alt="arjuna_resort_logo">
           </div>
           <div class="col-md-5 d-flex align-items-center md-4">
             <div class="container font-montserrat text-center">

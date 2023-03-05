@@ -77,7 +77,7 @@ $username = $_SESSION['username'];
           </div>
         <div class="row justify-content-center fs-5 pt-5 gap-3">
           <div class="col-md-5">
-            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 22rem;" alt="">
+            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 22rem;" alt="arjuna_resort_logo">
           </div>
           <div class="col-md-5 d-flex align-items-center">
             <div class="container font-montserrat text-start">
@@ -104,7 +104,7 @@ $username = $_SESSION['username'];
         </div>
         <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center column-gap-4 pt-3">
           <div class="card" style="width: 18rem;">
-            <img src="../img/room-1.jpg" class="card-img-top" alt="...">
+            <img src="../img/room-1.jpg" class="card-img-top" alt="room_cwr">
             <div class="card-body">
               <h5 class="card-title">Classic Wooden Room</h5>
               <p class="card-text">The Classic Wooden Room offers a calm impression of a beautiful sea atmosphere</p>
@@ -113,7 +113,7 @@ $username = $_SESSION['username'];
             </div>
           </div>
           <div class="card" style="width: 18rem;">
-            <img src="../img/room-2.jpg" class="card-img-top" alt="...">
+            <img src="../img/room-2.jpg" class="card-img-top" alt="room_mlr">
             <div class="card-body">
               <h5 class="card-title">Modern Large Room</h5>
               <p class="card-text">Modern Large Room is suitable for a place to vacation, rest, and relax with  family</p>
@@ -122,7 +122,7 @@ $username = $_SESSION['username'];
             </div>
           </div>
           <div class="card" style="width: 18rem;">
-            <img src="../img/room4.jpg" class="card-img-top" alt="...">
+            <img src="../img/room4.jpg" class="card-img-top" alt="room_cmr">
             <div class="card-body">
               <h5 class="card-title">Coastal Medium Room</h5>
               <p class="card-text">Coastal Medium Room is perfect for those of you who want to take a vacation with a thick beach residential atmosphere</p>
@@ -131,7 +131,7 @@ $username = $_SESSION['username'];
             </div>
           </div>
           <div class="card" style="width: 18rem;">
-            <img src="../img/room-3.jpg" class="card-img-top" alt="...">
+            <img src="../img/room-3.jpg" class="card-img-top" alt="room_rvr">
             <div class="card-body">
               <h5 class="card-title">Romantic Vintage Room</h5>
               <p class="card-text">Romantic Vintage Room is suitable for a vacation with your partner and wants to enjoy a romantic time together</p>
@@ -149,7 +149,7 @@ $username = $_SESSION['username'];
       <div class="container-fluid"> 
         <div class="row justify-content-center fs-5 pt-3 gap-3 md-4">
           <div class="col-md-5 text-center">
-            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 11rem;" alt="">
+            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 11rem;" alt="arjuna_resort_logo">
           </div>
           <div class="col-md-5 d-flex align-items-center md-4">
             <div class="container font-montserrat text-center">

@@ -74,22 +74,22 @@ $username = $_SESSION['username'];
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../img/swimming_pool.jpg"  class="d-block w-100" alt="...">
+                  <img src="../img/swimming_pool.jpg"  class="d-block w-100" alt="swimming_pool">
                 </div>
                 <div class="carousel-item">
-                  <img src="../img/gym.jpg" class="d-block w-100" alt="...">
+                  <img src="../img/gym.jpg" class="d-block w-100" alt="gym">
                 </div>
                 <div class="carousel-item">
-                  <img src="../img/spa.jpg" class="d-block w-100" alt="...">
+                  <img src="../img/spa.jpg" class="d-block w-100" alt="spa">
                 </div>
                 <div class="carousel-item">
-                  <img src="../img/bar.jpg" class="d-block w-100" alt="...">
+                  <img src="../img/bar.jpg" class="d-block w-100" alt="bar">
                 </div>
                 <div class="carousel-item">
-                  <img src="../img/restaurant.jpg" class="d-block w-100" alt="...">
+                  <img src="../img/restaurant.jpg" class="d-block w-100" alt="restaurant">
                 </div>
                 <div class="carousel-item">
-                  <img src="../img/room-6.jpg" class="d-block w-100" alt="...">
+                  <img src="../img/room-6.jpg" class="d-block w-100" alt="room">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -110,7 +110,7 @@ $username = $_SESSION['username'];
             <!-- keterangan pertama -->
             <div class="row justify-content-center fs-5 pt-3 pb-3 gap-3">
               <div class="col-md-5 text-center">
-                <img src="../img/swimming_pool.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="">
+                <img src="../img/swimming_pool.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="swimming_pool">
               </div>
               <div class="col-md-5 d-flex align-items-center">
                 <div class="container font-montserrat text-start">
@@ -136,7 +136,7 @@ $username = $_SESSION['username'];
                 </div>
               </div>
                 <div class="col-md-5 text-center">
-                  <img src="../img/gym.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="">
+                  <img src="../img/gym.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="gym">
                 </div>
             </div>
             <!--  -->
@@ -144,7 +144,7 @@ $username = $_SESSION['username'];
             <!-- keterangan ketiga -->
             <div class="row justify-content-center fs-5 pt-3 pb-3 gap-3">
               <div class="col-md-5 text-center">
-                <img src="../img/spa.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="">
+                <img src="../img/spa.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="spa">
               </div>
               <div class="col-md-5 d-flex align-items-center">
                 <div class="container font-montserrat text-start">
@@ -170,7 +170,7 @@ $username = $_SESSION['username'];
                 </div>
               </div>
               <div class="col-md-5 text-center">
-                <img src="../img/bar.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="">
+                <img src="../img/bar.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="bar">
               </div>
             </div>
             <!--  -->
@@ -178,7 +178,7 @@ $username = $_SESSION['username'];
             <!-- keterangan kelima -->
             <div class="row justify-content-center fs-5 pt-3 pb-3 gap-3">
               <div class="col-md-5 text-center">
-                <img src="../img/restaurant.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="">
+                <img src="../img/restaurant.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="restaurant">
               </div>
               <div class="col-md-5 d-flex align-items-center">
                 <div class="container font-montserrat text-start">
@@ -205,7 +205,7 @@ $username = $_SESSION['username'];
                 </div>
               </div>
                 <div class="col-md-5 text-center">
-                  <img src="../img/room-6.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="">
+                  <img src="../img/room-6.jpg" class="rounded img-thumbnail" style="width: 22rem;" alt="room">
                 </div>
             </div>
             <!--  -->
@@ -217,7 +217,7 @@ $username = $_SESSION['username'];
       <div class="container-fluid"> 
         <div class="row justify-content-center fs-5 pt-3 gap-3 md-4">
           <div class="col-md-5 text-center">
-            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 11rem;" alt="">
+            <img src="../img/Arjuna_logo.png" class="rounded img-thumbnail" style="width: 11rem;" alt="arjuna_resort_logo">
           </div>
           <div class="col-md-5 d-flex align-items-center md-4">
             <div class="container font-montserrat text-center">
