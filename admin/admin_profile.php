@@ -79,7 +79,7 @@ $username = $_SESSION['username'];
           <hr>
           <div class="dropdown pb-4 font-montserrat">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="../img/user.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+							<img src="../img/hollow_knight.jpg" alt="hugenerd" width="40" height="40" class="rounded-circle">
 							<span class="d-none d-sm-inline mx-1"><?php echo $username?></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-light text-small shadow" style="background-color: antiquewhite;">
@@ -121,7 +121,7 @@ $username = $_SESSION['username'];
               <div class="container">
                 <div class="row gap-3 justify-content-evenly">
                   <div class="col-md-4">
-                    <img src="../img/foto-diri.jpg" alt="" class="rounded img-fluid">
+                    <img src="../img/admin_profile.jpg" alt="" class="rounded img-fluid">
                   </div>
                   <div class="col-md-4">
                     <div class="text-center font-montserrat">
@@ -142,7 +142,7 @@ $username = $_SESSION['username'];
                         </div>
                         <div class="pt-2">
                           <p class="fw-bold">Divisi</p>
-                          <p>Backend Developer, Admin for Administration System</p>
+                          <p>Backend Developer</p>
                         </div>
                       </div>
                     </div>

@@ -82,7 +82,7 @@ $em = $_GET['email'];
           <hr>
           <div class="dropdown pb-4 font-montserrat">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="../img/user.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+							<img src="../img/hollow_knight.jpg" alt="hugenerd" width="40" height="40" class="rounded-circle">
 							<span class="d-none d-sm-inline mx-1"><?php echo $username?></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-light text-small shadow" style="background-color: antiquewhite;">
