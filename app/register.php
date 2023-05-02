@@ -6,6 +6,7 @@
     <title>Arjuna Resort | Register</title>
     <link rel="icon" type="image/x-icon" href="../img/Arjuna_logo_favicon_2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
@@ -66,7 +67,17 @@
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" name="password" id="password">
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" id="hs-toggle" name="password">
+                        <button class="btn btn-dark btn-md" type="button" id="button-addon2" onclick="hsToggle()"><i class="bi bi-eye" id="eye" title="Show Password"></i></button>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Confirm Password</label>
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" id="hs-toggle-confirm" name="password_confirm">
+                        <button class="btn btn-dark btn-md" type="button" id="button-addon2" onclick="hsToggleConfirm()"><i class="bi bi-eye" id="eye-confirm" title="Show Password"></i></button>
+                      </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="pria" class="col">
@@ -91,5 +102,40 @@
         <!--  -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script>
+      function hsToggle(){
+        let toggle = document.getElementById("hs-toggle");
+        let eye = document.getElementById("eye");
+        if (toggle.type === "password") {
+          toggle.type = "text";
+          eye.classList.remove("bi-eye");
+          eye.classList.add("bi-eye-slash");
+          eye.setAttribute("title", "Hide Password");
+        }
+        else{
+          toggle.type = "password";
+          eye.classList.remove("bi-eye-slash");
+          eye.classList.add("bi-eye");
+          eye.setAttribute("title", "Show Password");
+        }
+      }
+      function hsToggleConfirm(){
+        let toggle = document.getElementById("hs-toggle-confirm");
+        let eye = document.getElementById("eye-confirm");
+        if (toggle.type === "password") {
+          toggle.type = "text";
+          eye.classList.remove("bi-eye");
+          eye.classList.add("bi-eye-slash");
+          eye.setAttribute("title", "Hide Password");
+        }
+        else{
+          toggle.type = "password";
+          eye.classList.remove("bi-eye-slash");
+          eye.classList.add("bi-eye");
+          eye.setAttribute("title", "Show Password");
+        }
+      }
+    </script>
   </body>
 </html>
